@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Leveling Up: Git</title>
+
+		<meta name="description" content="A presentation for Women Who Code DC on more advanced git">
+		<meta name="author" content="Jessica Bell">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			<section>
+				<section>
+					<h1>Level Up: Git</h1>
+					<img width="50%" src="img/levelup.gif">
+					<p>
+						<small>Created by <a href="http://sirjessthebrave.github.io/">Jessica Bell</a> / <a href="http://twitter.com/sirjessthebrave">@SirJessTheBrave</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Who Am I?</li>
+						<li>Who are you?</li>
+						<li>A Team of One</li>
+						<li>Working in Teams</li>
+						<li>GIT... Oh Shit! </li>
+						<li>Make your first page with GitHub</li>
+						<li>QA Time</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Who Am I?</h2>
+					<ul>
+						<li>Jessica Bell</li>
+						<li>Web Developer at Deloitte Digital</li>
+						<li>Self taught: Degree in International Relations, General Assembly Bootcamp for Front End Web Development</li>
+						<li>Community Leadership: DC FemTech, DC Tech Meetup</li>
+						<li>GitHub: SirJessTheBrave</li>
+						<li>Twitter: @sirJessTheBrave</li>
+					</ul>
+				</section>
+				<section>
+					<div>Spirit Animal</div>
+					<img src="http://i34.photobucket.com/albums/d122/mydog5/Not%20Desu/madonna-vogue-kid-dancing-gif.gif">
+				</section>
+
+				<section>
+					<h2>Who Are You?</h2>
+					<ul>
+						<li>Name</li>
+						<li>Occupation/grade/thing that occupies most of your time</li>
+						<li>Why you are hear and what you want to learn</li>
+						<li>What is your Spirit Animal/persona/thing you love</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Lets Go!</h2>
+					<img src="https://media.giphy.com/media/eoxomXXVL2S0E/giphy.gif">
+				</section>
+			</section>
+
+			<section><!-- team of one -->
+				<section>
+					<h2>Team of One </h2>
+					<img src="img/win.gif">
+				</section>
+			</section><!--  team of one -->
+
+			<section><!--  working in teams-->
+				<section>
+					<h2>Working in Teams</h2>
+          <img src="img/groupHug.gif">
+				</section>
+			</section><!-- working in teams-->
+				
+			<section><!--  GIT... Oh Shit! -->
+				<section>
+					<h2>Git.... Oh Shit!</h2>
+          <img src="img/oh-shit.gif">
+				</section>
+			</section><!--  GIT... Oh Shit! -->
+
+			<section><!--  Github -->
+				<section>
+					<h2>Hosting your first page with GitHub</h2>
+					<img src="img/internet.gif">
+				</section>
+
+				<section>
+					<h2>Getting Started</h2>
+					<ul>
+						<li><a href="www.github.io">Create a free GitHub Account</a></li>
+						<li>Create your first Repository on GitHub</li>
+						<li>"Clone" your new repository onto your local machine</li>
+						<li>CODE!!</li>
+						<li>Using either your command line or a GitHub GUI (SourceTree is my reccomended one) "Push" your code to your online GitHub Account</li>
+						<li>Create a "Branch" and name is gh-pages on GitHub</li>
+						<li>Look in your repository settings to find the URL of your newly published site!</li>
+						<li>Profit!</li>
+					</ul>
+				</section>
+			</section><!--  Github -->
+
+			<section><!--  QA -->
+				<h2>Stop! Question-time!</h2>
+				<img src="img/question.gif">
+			</section><!--  QA -->
+
+			<section>
+				<h2>Fin</h2>
+				<small><a href="www.twitter.com/sirjessthebrave">@sirJessTheBrave</a> | <a href="https://github.com/sirjessthebrave">GitHub: SirJessTheBrave</a></small>
+				<img src="img/fin.gif">
+			</section>
+
+	 </div>
+
+	</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
