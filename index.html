@@ -118,6 +118,47 @@
 					<h2>Working in Teams</h2>
           <img src="img/groupHug.gif">
 				</section>
+
+        <section>
+          <h2>Git Team Workflows</h2>
+          <ul>
+            <li>Stick to one process/workflow</li>
+            <li>Enforce Standards</li>
+            <li>Integrate build processes/development cycles into your git workflow</li>
+            <li><a href="https://git-scm.com/book/ch3-4.html">Reference Guide</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="img/simplified-git-workflow.png">
+        </section>
+
+        <section>
+          <h2>Feature Branch workflow</h2>
+          <img src="img/git-flow.png">
+        </section>
+
+        <section>
+          <h2>Rebase vs Merge</h2>
+          <aside class="notes">
+            "If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch. On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. "
+          </aside>
+        </section>
+        <section>
+          <p>Merge: Takes the Master branch, and merges the code into the feature branch like normal, a non-desctructive operation but can pollute the feature branch if master is very active</p>
+          
+          <img src="img/merge.png">
+        </section>
+        <section>
+          <p>Rebase: Move entire feature branch to tip of master - which re-writes the project history.</p>
+          <img src="img/rebase.png">
+        </section>
+        <section>
+          <h2>Reference</h2>
+          <p><a href="https://raw.githubusercontent.com/gitforteams/diagrams/master/flowcharts/rebase-or-merge.png">Rebase or Merge?</a></p>
+          <p><a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing/">Merging vs Rebasing Article</a></p>
+        </section>
+
 			</section><!-- working in teams-->
 
 			<section><!--  GIT... Oh Shit! -->
@@ -126,13 +167,41 @@
           <img src="img/oh-shit.gif">
 				</section>
 
-				<section>
-					<h2>What Next</h2>
-					<ul>
-						<li>Don't panic!  This is why we are using git!</li>
-						<li>If you get stuck - use a GUI to visualize! (I reccomend SourceTree)</li>
-					</ul>
-				</section>
+        <section>
+          <h2>What Next</h2>
+          <ul>
+            <li>Don't panic!  This is why we are using git!</li>
+            <li>If you get stuck - use a GUI to visualize! (I reccomend SourceTree)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Reset</h2>
+          <img src="img/before-reset.png" style="float:left; width: 45%; margin: 1%; ">
+          <img src="img/after-reset.png" style="float:left; width: 45%; margin: 1%; ">
+          <aside class="notes">
+            This usage of git reset is a simple way to undo changes that haven’t been shared with anyone else. It’s your go-to command when you’ve started working on a feature and find yourself thinking, “Oh crap, what am I doing? I should just start over.”
+            --soft – The staged snapshot and working directory are not altered in any way.
+          --hard – The staged snapshot and the working directory are both updated to match the specified commit.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Revert</h2>
+          <img src="img/before-revert.png" style="float:left; width: 45%; margin: 1%; ">
+          <img src="img/after-revert.png" style="float:left; width: 45%; margin: 1%; ">
+          <aside class="notes">
+            Reverting undoes a commit by creating a new commit. This is a safe way to undo changes, as it has no chance of re-writing the commit history. For example, the following command will figure out the changes contained in the 2nd to last commit, create a new commit undoing those changes, and tack the new commit onto the existing project.
+
+            Contrast this with git reset, which does alter the existing commit history. For this reason, git revert should be used to undo changes on a public branch, and git reset should be reserved for undoing changes on a private branch.
+
+            You can also think of git revert as a tool for undoing committed changes, while git reset HEAD is for undoing uncommitted changes.
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/command-table.png">
+        </section>
 
 				<section>
 					<h2>Stashing</h2>
