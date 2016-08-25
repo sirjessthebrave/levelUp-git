@@ -141,7 +141,8 @@
         <section>
           <h2>Rebase vs Merge</h2>
           <aside class="notes">
-            "If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch. On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. "
+            - git rebase: clean, linear history free of unnecessary merge commits
+            - git merge: preserve the complete history of the project and avoid the risk of re-writing public commits
           </aside>
         </section>
         <section>
@@ -152,6 +153,17 @@
         <section>
           <p>Rebase: Move entire feature branch to tip of master - which re-writes the project history.</p>
           <img src="img/rebase.png">
+        </section>
+
+        <section>
+          <h2>Interactive Rebase, Squash, and Ammend</h2>
+          <ul>
+            <li>Ammend: Rewrite your git history</li>
+            <li>Interactive Rebase: 'git rebase' re-applies commits, in order, from your current branch to another. 'interactive' opens an editor with a list of the commits to be changed</li>
+            <li>Squash: melds commit into previous one - one big commit</li>
+            <li>Fixup: acts as a 'squash' but discards the commit's messages</li>
+          </ul>
+          <p><a href="https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history">Article and Commands</a></p>
         </section>
         <section>
           <h2>Reference</h2>
@@ -180,9 +192,10 @@
           <img src="img/before-reset.png" style="float:left; width: 45%; margin: 1%; ">
           <img src="img/after-reset.png" style="float:left; width: 45%; margin: 1%; ">
           <aside class="notes">
-            This usage of git reset is a simple way to undo changes that haven’t been shared with anyone else. It’s your go-to command when you’ve started working on a feature and find yourself thinking, “Oh crap, what am I doing? I should just start over.”
+            - git reset: undo changes that haven’t been shared with anyone else - alters the history
+                   “Oh crap, what am I doing? I should just start over.”
             --soft – The staged snapshot and working directory are not altered in any way.
-          --hard – The staged snapshot and the working directory are both updated to match the specified commit.
+            --hard – The staged snapshot and the working directory are both updated to match the specified commit.
           </aside>
         </section>
 
@@ -191,11 +204,11 @@
           <img src="img/before-revert.png" style="float:left; width: 45%; margin: 1%; ">
           <img src="img/after-revert.png" style="float:left; width: 45%; margin: 1%; ">
           <aside class="notes">
-            Reverting undoes a commit by creating a new commit. This is a safe way to undo changes, as it has no chance of re-writing the commit history. For example, the following command will figure out the changes contained in the 2nd to last commit, create a new commit undoing those changes, and tack the new commit onto the existing project.
-
-            Contrast this with git reset, which does alter the existing commit history. For this reason, git revert should be used to undo changes on a public branch, and git reset should be reserved for undoing changes on a private branch.
+            Reverting undoes a commit by creating a new commit - no chance of re-writing the commit history. 
 
             You can also think of git revert as a tool for undoing committed changes, while git reset HEAD is for undoing uncommitted changes.
+
+            For example, the following command will figure out the changes contained in the 2nd to last commit, create a new commit undoing those changes, and tack the new commit onto the existing project.
           </aside>
         </section>
 
